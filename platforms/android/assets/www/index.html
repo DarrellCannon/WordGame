@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What's In The Bag?</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/index.css"/>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+
+        <script type="text/javascript" language="JavaScript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+        
+    </head>
+
+    <manifest>
+        <application  android:hardwareAccelerated="true">           
+        </application>
+    </manifest>
+
+
+    <body class = "app">
+
+	
+    <!--menu page-->
+    <div id="menu">
+    	<h1>What's In The Bag?</h1>
+    	<br><br>
+    	<input class="play-btn" type="button" value="Begin!"/>	
+        <br><br>
+        <input class="cat-selector-btn" type="button" value="Choose Categories"/>
+        <br><br>
+        <input class="team-menu-btn" type="button" value="Team menu!"/>
+        <br><br>
+        <input class="restart-game" type="button" value="Restart Game"/>
+        <br><br>
+	</div>
+
+
+
+    <!--catergory toggle page-->
+    <div id="toggle-page">
+
+        <input class="enable-all-btn" type="button" value="Select All"/>
+        <input class="disable-all-btn" type="button" value="Select None"/>
+        <br><br>               
+        <ul id="category-list"></ul>
+        <br><br>
+        <input class="back-to-menu-btn" type="button" value="Back to menu"/>
+        <input class="play-btn" type="button" value="Begin!"/>
+        <br><br>
+        
+    </div>
+
+    <div id="none-selected">
+        <br><br><br>
+        <h1> You need to select</h1>
+        <br>
+        <h1>at least one!<h1>
+        <br><br>
+    </div>
+
+    
+
+    <!--create teams page-->
+    <div id="create-team-page">
+
+        <input class="add-team-btn" type="button" value="Add Team!"/>
+
+        <br><br>
+
+        <ul id="team-list"></ul>
+
+        <br><br>
+        <input class="remove-team-btn" type="button" value="Remove Team!"/>
+        <br><br>
+        
+        <input class="back-to-menu-btn" type="button" value="Back to menu"/>
+        <input class="play-btn" type="button" value="Begin!"/>
+        <br><br> 
+        
+    </div>
+
+
+
+
+    <!--main game page-->
+    <div id="main-game">
+
+        <h1 id="current-round"  class="small-h1"></h1>
+        <h1 id="playerName" class="small-h1"></h1>
+        <br>
+        
+        <ul id="team-score-list"></ul>
+        <br>
+        <h1 id="variable-rule" class="small-h1"></h1>
+
+        <p>
+            <h1 id="timer" class="small-h1"></h1>            
+            <h1 id="playerScore" class="small-h1"></h1>            
+        </p>
+
+        <p>
+            <h1 id="begin-btn">Begin!</h1>
+
+        </p>
+        
+        <div> 
+                <input id="incorrect" type="button">                
+                <h1 id = "the-word"></h1>
+                <input id="correct" type="button"/>            
+        </div>   
+             
+        <br>
+        <input class="team-menu-btn" type="button" value="Team menu!"/>
+        <br>
+        <input class="back-to-menu-btn" type="button" value="Back to menu"/>
+        <br><br>
+        
+    </div>
+
+
+
+    <!-- Turn complete page! -->
+    <div id="turn-complete">
+        <h1> Turn Complete!</h1>
+        <br>
+        <h1 id="turn-score" class="small-h1"></h1>
+        <br>
+        <h1 id="total-score" class="small-h1"></h1>
+        <br>
+        <input class="play-btn large-input" type="button" value="Next!"/>
+        <br><br>
+        <input class="back-to-menu-btn" type="button" value="Back to menu"/>
+        <br><br>
+
+    </div>
+
+
+    <!-- Round Summary -->
+    <div id="round-summary">  
+
+        <h1 id="round-title"></h1>
+
+        <br><br>
+
+        <ul id="score-list"></ul>
+
+        <br><br>
+
+        <div id="continue">
+            <input class="play-btn" type="button" value="Next!"/>
+        </div>
+        
+        <h1 id ="game-over">Game Over</h1>
+        <br><br>
+        <input class="back-to-menu-btn" type="button" value="Back to menu"/>
+        <br><br>
+
+    </div>
+
+
+
+
+
+
+    <!--Scripts-->   
+    <script src="js/JavaScript.js"></script>
+
+
+    <!-- Audio! -->
+    <audio src = "sounds/BeginJingle.mp3" id="begin-jingle" preload = "auto" type="audio/mpeg"></audio>
+    <audio src = "sounds/DoneBell.mp3" id="done-bell" preload = "auto" type="audio/mpeg"></audio>
+    <audio src = "sounds/Tick-Tock.mp3" id="tick-tock" preload = "auto" type="audio/mpeg"></audio>
+    <audio src = "sounds/Correct.mp3" id="correctSound" preload = "auto" type="audio/mpeg"></audio>
+    <audio src = "sounds/Incorrect.wav" id="incorrectSound" preload = "auto" type="audio/mpeg"></audio>
+
+ 
+    </body>
+</html>
